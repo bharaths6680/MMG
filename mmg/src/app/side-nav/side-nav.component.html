@@ -1,0 +1,111 @@
+
+<div class="row">
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <a [routerLink]="['/dashboard']"><span class='far fa-user-circle' style='font-size:40px;padding-right: 24px'>Admin</span></a>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Admin Panel</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class='far fa-address-card' style='font-size:18px; padding-right: 18px'></span>Dashboard</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a [routerLink]="['/dashboard']"><span class='far fa-address-card' style='font-size:15px; padding-right: 5px'></span>Dashboard</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#pageSubmenu-1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class='fas fa-truck' style='font-size:18px; padding-right: 18px'></span>Driver</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu-1">
+                    <li>
+                        <a [routerLink]="['/driver-form']">Driver form</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/driver-list']">Driver List</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/driver-detail']">Driver details</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu-2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class='far fa-user' style='font-size:18px; padding-right: 18px'></span>Customer</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu-2">
+                    <li>
+                        <a [routerLink]="['/customer']">Customer form</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/customer']">Customer Issue 2</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/customer']">Customer Issue 3</a>
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu-3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class='fas fa-briefcase' style='font-size:18px; padding-right: 18px'></span>Fleet Operator</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu-3">
+                        <li>
+                            <a [routerLink]="['/operator']">Fleet operator form</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/operator']">Fleet operator 2</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['/operator']">Fleet operator 3</a>
+                        </li>
+                    </ul>
+                    </li>
+            <li>
+                <a href="#pageSubmenu-4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class='fa fa-users' style='font-size:18px; padding-right: 18px'></span>Franchise</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu-4">
+                    <li>
+                        <a [routerLink]="['/franchise']">Francise form</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/franchise']">Franchise Issue 2</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/franchise']">Franchise Issue 3</a>
+                    </li>
+                </ul>
+                </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+        
+                        <button type="button" id="sidebarCollapse" class="navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        
+                        <b><h1 class="nav navbar-nav">
+                         {{title}}
+                      </h1></b>
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Settings</a>
+                            </li>
+                            </ul>
+                        
+                    </div>
+                    
+                </nav>
+                <router-outlet></router-outlet>
+
+    </div>
+</div>
+</div>
